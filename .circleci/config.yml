@@ -23,4 +23,6 @@ workflows:
   ak:
     jobs:
       - job1
-      - job2
+      - job2:
+          requires:
+              - job1
