@@ -17,7 +17,15 @@ jobs:
       - checkout
       - run:
           name: Run another Go script
-          command: go run test.go  
+          command: go run test.go
+  job3:
+    docker:
+      - image: golang:1.17  
+    steps:
+      - checkout
+      - run:
+          name: Run another Go script
+          command: go run test.go
 
 workflows:
   ak:
@@ -26,3 +34,6 @@ workflows:
       - job2:
           requires:
               - job1
+      - job3:
+          requires:
+              - job2
