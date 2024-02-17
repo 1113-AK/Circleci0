@@ -1,0 +1,26 @@
+version: 2.1
+
+jobs:
+  job1:
+    docker:
+      - image: golang:1.17  # Use an appropriate Go Docker image
+    steps:
+      - checkout
+      - run:
+          name: Run Go script
+          command: go run your_go_script.go  # Specify the name of your Go script here
+
+  job2:
+    docker:
+      - image: golang:1.17  # Use an appropriate Go Docker image
+    steps:
+      - checkout
+      - run:
+          name: Run another Go script
+          command: go run another_go_script.go  # Specify the name of your other Go script here
+
+workflows:
+  flow1:
+    jobs:
+      - job1
+      - job2
