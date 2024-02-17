@@ -20,7 +20,7 @@ jobs:
           command: go run test.go  # Specify the name of your other Go script here
 
 workflows:
-  flow1:
+  ak:
     jobs:
       - job1
       - job2
