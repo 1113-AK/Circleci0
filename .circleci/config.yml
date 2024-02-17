@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Run Go script
-          command: go run your_go_script.go  # Specify the name of your Go script here
+          command: echo hello  # Specify the name of your Go script here
 
   job2:
     docker:
@@ -17,7 +17,7 @@ jobs:
       - checkout
       - run:
           name: Run another Go script
-          command: go run another_go_script.go  # Specify the name of your other Go script here
+          command: go run test.go  # Specify the name of your other Go script here
 
 workflows:
   flow1:
