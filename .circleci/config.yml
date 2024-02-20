@@ -26,7 +26,7 @@ jobs:
       - run:
           name: Run another Go script
           command: go run test.go
-
+          
 workflows:
   ak:
     jobs:
