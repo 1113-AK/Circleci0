@@ -36,9 +36,6 @@ workflows:
             branches:
               only:
                 - main
-          event:
-            name: pull_request
-            types: [opened, reopened, synchronize]
       - job2:
           requires:
             - job1
