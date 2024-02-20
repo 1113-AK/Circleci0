@@ -33,11 +33,11 @@ workflows:
       - job1
       - job2:
           requires:
-              - job1
+            - job1
   ak2:
     jobs:
       - job3:
           filters:
             branches:
               only:
-                - branch1
+                - branch1  
