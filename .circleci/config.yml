@@ -28,16 +28,17 @@ jobs:
           command: echo I'm Batman
           
 workflows:
+  version: 2
   ak:
     jobs:
-      - job1
-      - job2:
-          requires:
-            - job1
-  ak2:
-    jobs:
-      - job3:
+      - job1:
           filters:
             branches:
               only:
-                - branch1  
+                - main
+          event:
+            name: pull_request
+            types: [opened, reopened, synchronize]
+      - job2:
+          requires:
+            - job1
