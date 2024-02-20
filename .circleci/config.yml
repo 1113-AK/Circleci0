@@ -32,10 +32,10 @@ workflows:
   ak:
     jobs:
       - job1:
-          filters:
-            branches:
-              only:
-                - branch1
+          #filters:
+            #branches:
+              #only:
+                #- branch1
       - job2:
           requires:
             - job1
