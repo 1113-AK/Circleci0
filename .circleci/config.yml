@@ -31,11 +31,12 @@ workflows:
   version: 2
   ak:
     jobs:
-      - job1:
-          filters:
-            branches:
-              only:
-                - branch1
+        - job1
+      # - job1:
+      #     filters:
+      #       branches:
+      #         only:
+      #           - branch1
       - job2:
           requires:
             - job1
